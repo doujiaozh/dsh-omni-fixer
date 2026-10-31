@@ -1,0 +1,64 @@
+{
+  "name": "dsh-omni-fixer",
+  "version": "0.1.0",
+  "description": "DSH Omni-Fixer — model-agnostic, scale-agnostic automated error-repair pipeline: AST scan -> surgical contract -> adaptive model routing -> sandbox verification -> battle report.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "README_zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": "^0.2.1-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:local": "tsc -p tsconfig.local.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pretest": "npm run build:local",
+    "test": "node --test tests/",
+    "clean": "node -e \"require('node:fs').rmSync('lib',{recursive:true,force:true})\""
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "auto-fix",
+    "linter",
+    "repair-pipeline"
+  ],
+  "author": "DSH Omni-Fixer contributors",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-tools": "^0.2.1-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-tools": "^0.2.1-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.4",
+    "@types/node": "^22.20.0",
+    "typescript": "^5.9.3"
+  }
+}

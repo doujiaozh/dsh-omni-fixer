@@ -1,0 +1,8 @@
+# bundle patch —— 把 DSH Omni-Fixer 作为一行插入 dsh profile。
+#
+# `name` 必须是 loader 能从 profile node_modules 解析到的模块 id（本包自身包名）。
+# `config` 不放任何凭据：模型 API key 请走插件配置卡片（设置 → 插件配置 → Omni-Fixer）
+# 或环境变量 OMNI_LLM_API_KEY。
+- insert:
+    - id: 'dsh-omni-fixer'
+      name: 'dsh-omni-fixer'

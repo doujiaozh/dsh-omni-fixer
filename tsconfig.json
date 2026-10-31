@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "lib": ["ES2023"],
+    "types": ["node"],
+    "outDir": "lib",
+    "rootDir": "src",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmitOnError": true,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": false,
+    "typeRoots": [
+      "C:/Users/Administrator/.dsh/profiles/desktop/node_modules/@types"
+    ],
+    "paths": {
+      "@deepseek-ai/cordis": ["./src/types/cordis.d.ts"],
+      "@deepseek-ai/dsh-tools": ["./src/types/dsh-tools.d.ts"],
+      "@deepseek-ai/schemastery": ["./src/types/schemastery.d.ts"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

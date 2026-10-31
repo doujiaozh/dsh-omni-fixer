@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Omni-Fixer Universal Error Repair Pipeline",
+    "description": "AST sniffing -> surgical isolation -> adaptive weak/strong model routing -> physical sandbox verification -> battle report. Works with any model, any codebase size."
+  }
+}
